@@ -88,7 +88,7 @@ export default function Login() {
                     Forgot password?
                 </a>
             </div>
-            <button type="submit" className="mt-8 h-11 w-full cursor-pointer rounded-full bg-linear-to-b from-gray-600 to-gray-800 text-white transition hover:from-gray-700 hover:to-gray-900" >
+            <button type="submit" className="mt-8 h-11 w-full cursor-pointer rounded-full bg-[rgb(var(--brand-green))] text-white transition hover:bg-[rgb(var(--btn-hover))]" >
                 Login
             </button>
         </form>

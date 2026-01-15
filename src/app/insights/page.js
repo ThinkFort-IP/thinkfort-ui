@@ -1,4 +1,4 @@
-import BlogSection from "@/components/BlogSection";
+import BlogSection from "@/components/Blog/BlogSection";
 
 export default function Page() {
   return (

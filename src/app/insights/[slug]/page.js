@@ -1,5 +1,5 @@
 "use client";
-import BlogPage from "@/components/BlogPage";
+import BlogPage from "@/components/Blog/BlogPage";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
@@ -7,7 +7,7 @@ export default function Page() {
   const params = useParams();
   const [blog, setBlog] = useState(null);
   useEffect(() => {
-    fetch("/blogs.json")
+    fetch("/blogs/blogs.json")
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);

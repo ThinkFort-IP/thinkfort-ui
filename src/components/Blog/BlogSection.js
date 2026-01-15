@@ -9,7 +9,7 @@ export default function BlogSection() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("/blogs.json")
+    fetch("/blogs/blogs.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

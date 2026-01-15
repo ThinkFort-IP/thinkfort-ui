@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 
 export default function BlogSection() {
-  // TODO: Write blogs
-
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {

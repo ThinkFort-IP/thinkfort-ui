@@ -3,15 +3,8 @@ import Image from "next/image";
 export default function About() {
     return (
         <>
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-                * {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
             <section className="mt-35 mb-20 flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4">
-                <div className="relative shadow-2xl shadow-indigo-600/40 rounded-2xl overflow-hidden shrink-0">
+                <div className="relative shadow-2xl shadow-[rgb(var(--bg-surface))] rounded-2xl overflow-hidden shrink-0">
                 {/* TODO: Change image */}
                     <Image width={900} height={900} className="max-w-md object-cover rounded-2xl"
                         src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=451&h=451&auto=format&fit=crop"
@@ -26,16 +19,17 @@ export default function About() {
                                 alt="image"
                                 className="size-9 rounded-full border-[3px] border-white hover:-translate-y-1 transition z-[3]" />
                             <div
-                                className="flex items-center justify-center text-xs  text-white size-9 rounded-full border-[3px] border-white bg-indigo-600 hover:-translate-y-1 transition z-[4]">
+                                className="flex items-center justify-center text-xs  text-white size-9 rounded-full border-[3px] border-white bg-[rgb(var(--brand-green))] hover:-translate-y-1 transition z-[4]">
                                 50+
                             </div>
                         </div>
+                        {/* TODO */}
                         <p className="text-sm font-medium text-slate-800">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
                 <div className="text-sm text-slate-600 max-w-lg">
                     <h1 className="text-xl uppercase font-semibold text-slate-700">What we do?</h1>
-                    <div className="w-24 h-[3px] rounded-full bg-gradient-to-r from-indigo-600 to-[#DDD9FF]"></div>
+                    <div className="w-24 h-[3px] rounded-full bg-gradient-to-r from-[rgb(var(--brand-green))] to-[rgb(var(--brand-gold))]"></div>
                     <p className="mt-8">ThinkFortIP is an Intellectual Property Rights (IPR) firm focused on technically strong filings, strategic IP enhancement, and client-oriented execution. We work with startups, MSMEs, universities, and innovation-driven organizations to transform ideas into legally enforceable and commercially valuable IP assets.</p>
                     <p className="mt-4">In a competitive innovation ecosystem, filing alone is not enough. The quality of drafting, accuracy of filing, and alignment with business goals determine the true strength of intellectual property. ThinkFortIP follows a structured, detail-driven approach to ensure that every patent, trademark, or copyright filing supports long-term protection and growth.</p>
 

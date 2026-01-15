@@ -1,7 +1,9 @@
+import ServiceSection from "@/components/ServiceSection";
+
 export default function Service() {
   return (
-    <div>
-      <p className="mt-35">Service</p>
+    <div className="mt-35 mb-20">
+      <ServiceSection />
     </div>
   );
 }

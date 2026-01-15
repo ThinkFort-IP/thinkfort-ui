@@ -14,6 +14,18 @@ const nextConfig = {
         port: '',
         pathname: '/**', // This allows all paths from this hostname
       },
+      {
+        protocol: 'https',
+        hostname: 'flowbite.com',
+        port: '',
+        pathname: '/**', // This allows all paths from this hostname
+      },
+      {
+        protocol: 'https',
+        hostname: 'flowbite.s3.amazonaws.com',
+        port: '',
+        pathname: '/**', // This allows all paths from this hostname
+      },
     ],
   },
 }

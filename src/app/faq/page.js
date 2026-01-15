@@ -79,11 +79,7 @@ export default function FAQ () {
                 }
             `}</style>
             <div className="mt-35 mb-20 flex flex-col md:flex-row items-start justify-center gap-8 px-4 md:px-0">
-                <Image width={384} height={390}
-                    className="max-w-sm w-full rounded-xl h-auto"
-                    src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?q=80&w=830&h=844&auto=format&fit=crop"
-                    alt=""
-                />
+                
                 <div>
                     <p className="text-indigo-600 text-sm font-medium">FAQ&apos;s</p>
                     <h1 className="text-3xl font-semibold">Looking for answer?</h1>

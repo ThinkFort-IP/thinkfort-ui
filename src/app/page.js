@@ -10,6 +10,7 @@ export default function Home() {
         <HeroSection />
         <HR />
         <BlogSection />
+        <HR />
       </main>
     </div>
   );

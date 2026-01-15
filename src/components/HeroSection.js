@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { useRouter } from 'next/navigation'
 export const HeroSection = () => {
-  const router = useRouter()
+  const router = useRouter();
+  
   return (
     <div className="mt-35 flex flex-col max-md:gap-20 md:flex-row pb-20 items-center justify-between mt-20 px-4 md:px-16 lg:px-24 xl:px-32">
       <div className="flex flex-col items-center md:items-start">

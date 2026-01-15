@@ -1,4 +1,4 @@
-import ServiceSection from "@/components/ServiceSection";
+import ServiceSection from "@/components/Service/ServiceSection";
 
 export default function Service() {
   return (

@@ -11,13 +11,13 @@ export default function BlogPage({
     <>
       {blog && (
         <div>
-          <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+          <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white antialiased">
             <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-              <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+              <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue">
                 {/* HEADER */}
                 <header className="mb-4 lg:mb-6 not-prose">
                   <address className="flex items-center mb-6 not-italic">
-                    <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                    <div className="inline-flex items-center mr-3 text-sm text-gray-900">
                       <Image
                         width={64}
                         height={64}
@@ -26,13 +26,13 @@ export default function BlogPage({
                         alt={author?.name}
                       />
                       <div>
-                        <p className="text-xl font-bold text-gray-900 dark:text-white">
+                        <p className="text-xl font-bold text-gray-900">
                           {author?.name}
                         </p>
-                        <p className="text-base text-gray-500 dark:text-gray-400">
+                        <p className="text-base text-gray-500">
                           {author?.role}
                         </p>
-                        <p className="text-base text-gray-500 dark:text-gray-400">
+                        <p className="text-base text-gray-500">
                           <time dateTime={publishedAt?.iso}>
                             {publishedAt?.label}
                           </time>
@@ -41,7 +41,7 @@ export default function BlogPage({
                     </div>
                   </address>
 
-                  <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+                  <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">
                     {title}
                   </h1>
 

@@ -81,7 +81,7 @@ export default function FAQ () {
             <div className="mt-35 mb-20 flex flex-col md:flex-row items-start justify-center gap-8 px-4 md:px-0">
                 
                 <div>
-                    <p className="text-indigo-600 text-sm font-medium">FAQ&apos;s</p>
+                    <p className="text-[rgb(var(--brand-gold))] text-sm font-medium">FAQ&apos;s</p>
                     <h1 className="text-3xl font-semibold">Looking for answer?</h1>
                     <p className="text-sm text-slate-500 mt-2 pb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis bibendum felis a dignissim.

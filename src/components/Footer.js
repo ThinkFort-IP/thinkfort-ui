@@ -27,7 +27,7 @@ export default function Footer() {
                             </Link>
 
                             <p className='text-sm text-[rgb(var(--brand-green))] mt-6 max-w-sm leading-relaxed'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis bibendum felis a dignissim.
+                                Strategic intellectual property solutions helping innovators protect ideas, strengthen assets, and unlock long-term value.
                             </p>
                         </div>
             
@@ -56,7 +56,7 @@ export default function Footer() {
                         <div className="w-full md:w-[45%] lg:w-[25%] flex flex-col items-center md:items-start text-center md:text-left">
                             <h3 className='text-sm text-[rgb(var(--brand-green))] font-medium'>Subscribe for news</h3>
                             <div className="flex items-center border gap-2 border-[rgb(var(--brand-green))] h-13 max-w-80 w-full rounded-full overflow-hidden mt-4">
-                                <input type="email" placeholder="Enter your email.." className="w-full h-full pl-6 outline-none text-sm bg-transparent text-white placeholder-[rgb(var(--brand-green))] placeholder:text-xs" required />
+                                <input type="email" placeholder="Enter your email.." className="w-full h-full pl-6 outline-none text-sm bg-transparent text-[rgb(var(--brand-green))] placeholder-[rgb(var(--brand-green))] placeholder:text-xs" required />
                                 <button type="submit" className="bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] active:scale-95 transition w-56 h-10 rounded-full text-sm text-white cursor-pointer mr-1.5">Subscribe</button>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                     <div className='w-full h-px mt-16 mb-4 bg-linear-to-r from-black via-white/25 to-black'></div>
             
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className='text-xs text-[rgb(var(--brand-green))]'>© 2026 ThinkFort IP</p>
+                        <p className='text-xs text-[rgb(var(--brand-green))]'>© 2026 ThinkFort IP. All Rights Reserved.</p>
                         <div className="flex items-center gap-6">
                             <Link href='/terms-and-conditions' className='text-xs text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Terms & Conditions</Link>
                             <div className='w-px h-4 bg-white/20'></div>

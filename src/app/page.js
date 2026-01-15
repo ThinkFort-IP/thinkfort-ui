@@ -2,6 +2,8 @@ import { HeroSection } from "@/components/HeroSection";
 import styles from "./page.module.css";
 import BlogSection from "@/components/Blog/BlogSection";
 import HR from "@/components/HR";
+import ServiceSection from "@/components/Service/ServiceSection";
+import SolutionsSection from "@/components/Solution/SolutionSection";
 
 export default function Home() {
   return (
@@ -11,6 +13,9 @@ export default function Home() {
         <HR />
         <BlogSection />
         <HR />
+        <ServiceSection />
+        <HR />
+        <SolutionsSection />
       </main>
     </div>
   );

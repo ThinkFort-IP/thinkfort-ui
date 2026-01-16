@@ -1,5 +1,9 @@
 import Image from "next/image";
-
+export const metadata = {
+  title: "IP Filing Services | Your Brand",
+  description:
+    "End-to-end IP filing services including patents, trademarks, and copyrights.",
+};
 export default function About() {
     return (
         <>

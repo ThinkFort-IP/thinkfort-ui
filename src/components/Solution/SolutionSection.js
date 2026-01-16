@@ -16,7 +16,7 @@ export default function SolutionsSection() {
         Tailored IP Solutions for Every Innovator
       </h1>
       <p className="text-md text-slate-500 text-center mt-2 max-w-md mx-auto">
-        From concept to commercialization, we provide strategic guidance and protection to accelerate innovation, secure ideas, and maximize impact across startups, businesses, and institutions.
+        From concept to commercialization, we provide strategic guidance and protection to accelerate innovation, secure ideas, and maximize impact across startups, businesses, and institutions
       </p>
       <div className="flex items-center justify-center flex-wrap gap-6 mt-15 mb-20 px-4 md:px-10">
       {solutions &&

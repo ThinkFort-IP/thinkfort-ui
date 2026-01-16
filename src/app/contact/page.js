@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Support & Assistance",
+  description:
+    "Get expert support from ThinkFort for intellectual property queries, filings, and legal assistance.",
+  alternates: {
+    canonical: "https://thinkfortip.netlify.app/contact",
+  },
+  openGraph: {
+    title: "Support & Assistance | ThinkFort",
+    description:
+      "Professional IP support and guidance from experienced legal experts.",
+    url: "https://thinkfortip.netlify.app/contact",
+  },
+};
 export default function Contact() {
     return (
         <form className="mt-35 mb-20 flex flex-col items-center text-sm text-slate-800">

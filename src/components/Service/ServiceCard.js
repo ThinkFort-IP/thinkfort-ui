@@ -7,8 +7,7 @@ export default function ServiceCard(props) {
   return (
     <div
       onClick={() => router.push("/service/" + service.slug)}
-      className="flex flex-col items-center text-center rounded-xl p-6 border border-violet-200 cursor-pointer 
-                                 w-72 h-96 sm:w-80 sm:h-96 md:w-72 md:h-96 lg:w-80 lg:h-96 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+      className="flex flex-col items-center text-center rounded-xl p-6 border border-violet-200 cursor-pointer w-72 h-96 sm:w-80 sm:h-96 md:w-72 md:h-96 lg:w-80 lg:h-96 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
       <div className="mt-6 aspect-square w-20 sm:w-24 rounded-full overflow-hidden">
         <Image

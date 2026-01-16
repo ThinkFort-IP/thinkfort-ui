@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function BlogCard(props) {
+
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
   const [tooltipVisible, setTooltipVisible] = React.useState(false);
   const divRef = React.useRef(null);
@@ -20,7 +21,7 @@ export default function BlogCard(props) {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setTooltipVisible(true)}
       onMouseLeave={() => setTooltipVisible(false)}
-      className="relative flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-full"
+      className="flex flex-col items-center text-center rounded-xl border border-violet-200 cursor-pointer w-72 h-96 sm:w-80 sm:h-96 md:w-72 md:h-96 lg:w-110 lg:h-130 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
       {/* Tooltip */}
       <span
@@ -37,30 +38,26 @@ export default function BlogCard(props) {
       </span>
 
       {/* Image */}
-      <a href="#">
-        <Image
-          width={382}
-          height={224}
-          className="rounded-t-lg w-full h-56 object-cover object-top"
-          src={props.blog.image}
-          alt={props.blog.title || ""}
-        />
-      </a>
+      <Image
+        width={382}
+        height={224}
+        className="rounded-t-lg w-full h-56 object-cover object-top"
+        src={props.blog.image}
+        alt={props.blog.title || ""}
+      />
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-5">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-2">
-            {props?.blog?.title}
-          </h5>
-        </a>
-        <p className="mb-3 font-mal text-gray-700 line-clamp-3 flex-1">
+        <h5 className="text-base font-semibold text-slate-700">
+          {props?.blog?.title}
+        </h5>
+        <p className="text-md mt-2 text-slate-600">
           {props?.blog?.description}
         </p>
         <div className="mt-auto">
           <Link
             href={"/insights/" + props.blog.slug}
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300"
+            className="inline-flex items-center text-sm font-medium text-center text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300"
           >
             Read more
             <svg

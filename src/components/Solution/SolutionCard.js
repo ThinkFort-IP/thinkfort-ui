@@ -18,7 +18,7 @@ export default function SolutionCard(props) {
           <p>
             <Link
               href={"/solution/" + solution.slug}
-              className="text-[rgb(var(--brand-green))] transition-all duration-300 group-hover:text-[rgb(var(--brand-gold))]"
+              className="text-[rgb(var(--brand-green))] transition-all duration-300 hover:text-[rgb(var(--brand-gold))]"
             >
               Know more &rarr;
             </Link>

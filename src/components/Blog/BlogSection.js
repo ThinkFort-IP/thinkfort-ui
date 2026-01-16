@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function BlogSection() {
   const [blogs, setBlogs] = useState([]);
-
+  const pathname = usePathname();
   useEffect(() => {
     fetch("/blogs/blogs.json")
       .then((res) => res.json())
@@ -26,6 +27,17 @@ export default function BlogSection() {
         {blogs?.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-8 pt-12">
+        {pathname !== "/insights" && (
+          <Link
+            href="/insights/"
+            className="inline-flex items-center px-3 py-3 text-sm font-medium text-center text-white bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300 "
+          >
+            Explore
+          </Link>
+        )}
       </div>
     </div>
   );

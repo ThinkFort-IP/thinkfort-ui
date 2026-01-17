@@ -1,23 +1,81 @@
-"use client";
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import SolutionPage from "@/components/Solution/SolutionPage";
+import solutions from "@/data/solutions.json";
+import { notFound } from "next/navigation";
 
-export default function Page() {
-  const params = useParams();
-  const [solutions, setSolutions] = useState([]);
-  useEffect(() => {
-    fetch("/solutions/solutions.json")
-      .then((res) => res.json())
-      .then((data) => setSolutions(data));
-  }, []);
-  if (!solutions) return null;
-  const { slug } = params;
-  const currentSolution = solutions?.find((b) => b.slug === slug);
+/* -------------------- METADATA -------------------- */
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const solution = solutions.find((s) => s.slug === slug);
+  if (!solution) return {};
+
+  return {
+    title: `${solution.title} | ThinkFort IP`,
+    description: solution.excerpt,
+    alternates: {
+      canonical: `https://thinkfortip.netlify.app/solution/${slug}`,
+    },
+    openGraph: {
+      title: `${solution.title} | ThinkFort IP`,
+      description: solution.excerpt,
+      url: `https://thinkfortip.netlify.app/solution/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: `https://thinkfortip.netlify.app${
+            solution.image || "/logo.png"
+          }`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${solution.title} | ThinkFort IP`,
+      description: solution.excerpt,
+      images: [
+        `https://thinkfortip.netlify.app${solution.image || "/logo.png"}`,
+      ],
+    },
+  };
+}
+
+/* -------------------- PAGE -------------------- */
+export default async function Page({ params }) {
+  const { slug } = await params;
+  if (!solutions) notFound();
+  const solution = solutions?.find((b) => b.slug === slug);
 
   return (
-    <div className="mt-35">
-      {currentSolution && <SolutionPage solution={currentSolution} />}
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service", // Google-friendly schema
+            name: solution.title,
+            description: solution.excerpt,
+            url: `https://thinkfortip.netlify.app/solution/${solution.slug}`,
+            provider: {
+              "@type": "Organization",
+              name: "ThinkFort",
+              url: "https://thinkfortip.netlify.app",
+              logo: "https://thinkfortip.netlify.app/logo.png",
+            },
+          }),
+        }}
+      />
+      <div className="mt-35">
+        {solution && <SolutionPage solution={solution} />}
+      </div>
+    </>
   );
+}
+
+/* -------------------- STATIC GENERATION -------------------- */
+export async function generateStaticParams() {
+  return solutions.map((s) => ({
+    slug: s.slug,
+  }));
 }

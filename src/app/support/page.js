@@ -3,19 +3,19 @@ export const metadata = {
   description:
     "Get expert support from ThinkFort for intellectual property queries, filings, and legal assistance.",
   alternates: {
-    canonical: "https://thinkfortip.netlify.app/contact",
+    canonical: "https://thinkfortip.netlify.app/support",
   },
   openGraph: {
     title: "Support & Assistance | ThinkFort",
     description:
       "Professional IP support and guidance from experienced legal experts.",
-    url: "https://thinkfortip.netlify.app/contact",
+    url: "https://thinkfortip.netlify.app/support",
   },
 };
 export default function Contact() {
     return (
         <form className="mt-35 mb-20 flex flex-col items-center text-sm text-slate-800">
-            <p className="text-xs bg-[rgb(var(--brand-green))] text-white font-medium px-3 py-1 rounded-full">Contact us</p> 
+            <p className="text-xs bg-[rgb(var(--brand-green))] text-white font-medium px-3 py-1 rounded-full">Support</p> 
             <h1 className="text-4xl font-bold py-4 text-center">Let’s Get In Touch.</h1>
             <p className="max-md:text-sm text-gray-500 pb-10 text-center">
                 Or just reach out manually to us at <a href="mailto:thinkfortip@outlook.com" className="text-[rgb(var(--brand-green))] hover:underline">thinkfortip@outlook.com</a>

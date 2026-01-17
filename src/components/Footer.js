@@ -38,7 +38,8 @@ export default function Footer() {
                                 <Link href="/about" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>About</Link>
                                 <Link href="/faq" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>FAQ</Link>
                                 <Link href="/careers" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Careers</Link>
-                                <Link href="/contact" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Support</Link>
+                                <Link href="/support" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Support</Link>
+                                <Link href="/contact" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Contact us</Link>
 
                             </div>
                         </div>

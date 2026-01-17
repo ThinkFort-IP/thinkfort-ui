@@ -1,17 +1,11 @@
 "use client";
-
-import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import blogs from "@/data/blogs.json";
+
 export default function BlogSection() {
-  const [blogs, setBlogs] = useState([]);
   const pathname = usePathname();
-  useEffect(() => {
-    fetch("/blogs/blogs.json")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
 
   return (
     <div className="mt-35 mb-20">
@@ -35,7 +29,7 @@ export default function BlogSection() {
             href="/insights/"
             className="inline-flex items-center px-3 py-3 text-sm font-medium text-center text-white bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300 "
           >
-            Explore
+            Explore Insights
           </Link>
         )}
       </div>

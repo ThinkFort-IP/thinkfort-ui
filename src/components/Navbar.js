@@ -29,7 +29,7 @@ export const Navbar = () => {
                         src="/logo.png"
                         alt="Brand Logo"
                         width={100}
-                        height={300}
+                        height={70}
                     />
                 </Link>
 

@@ -21,7 +21,7 @@ export default function BlogCard(props) {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setTooltipVisible(true)}
       onMouseLeave={() => setTooltipVisible(false)}
-      className="flex flex-col items-center text-center rounded-xl border border-violet-200 cursor-pointer w-72 h-96 sm:w-80 sm:h-96 md:w-72 md:h-96 lg:w-110 lg:h-130 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+      className="flex flex-col items-center text-center rounded-xl border border-violet-200 cursor-pointer w-110 h-120 sm:w-110 sm:h-120 md:w-110 md:h-120 lg:w-110 lg:h-130 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
       {/* Tooltip */}
       <span

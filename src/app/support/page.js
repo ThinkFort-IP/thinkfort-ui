@@ -12,7 +12,7 @@ export const metadata = {
     url: "https://thinkfortip.netlify.app/support",
   },
 };
-export default function Contact() {
+export default function Page() {
     return (
         <form className="mt-35 mb-20 flex flex-col items-center text-sm text-slate-800">
             <p className="text-xs bg-[rgb(var(--brand-green))] text-white font-medium px-3 py-1 rounded-full">Support</p> 

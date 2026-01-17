@@ -34,10 +34,11 @@ export default function Footer() {
                         <div className="w-full md:w-[45%] lg:w-[15%] flex flex-col items-center md:items-start text-center md:text-left">
                             <h3 className='text-sm text-[rgb(var(--brand-green))] font-medium'>Important Links</h3>
                             <div className="flex flex-col gap-2 mt-6">
-                                <Link href="/" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Home</Link>
                                 <Link href="/about" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>About</Link>
                                 <Link href="/faq" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>FAQ</Link>
                                 <Link href="/careers" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Careers</Link>
+                                <Link href="/testimonials" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Testimonials</Link>
+                                <Link href="/metrics" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Metrics</Link>
                                 <Link href="/support" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Support</Link>
                                 <Link href="/contact" className='text-sm text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] transition-colors'>Contact us</Link>
 

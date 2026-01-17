@@ -1,16 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import services from "@/data/services.json";
 
 export default function ServiceSection() {
-  const [services, setServices] = useState([]);
-  useEffect(() => {
-    fetch("/services/services.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
-
   return (
     <>
       <h1 className="text-3xl font-semibold text-center mx-auto">

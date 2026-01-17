@@ -1,8 +1,4 @@
-"use client";
-
 export default function SolutionPage(props) {
-  console.log(props);
-  
   const solution = props.solution;
   return (
     <section className="py-20 border-b border-slate-200">

@@ -1,14 +1,7 @@
-"use client"
-import { useEffect, useState } from "react";
 import SolutionCard from "./SolutionCard";
+import solutions from "@/data/solutions.json";
 
 export default function SolutionsSection() {
-  const [solutions, setSolutions] = useState([]);
-  useEffect(() => {
-    fetch("/solutions/solutions.json")
-      .then((res) => res.json())
-      .then((data) => setSolutions(data));
-  }, []);
 
   return (
     <>

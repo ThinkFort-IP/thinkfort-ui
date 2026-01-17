@@ -1,11 +1,9 @@
-"use client";
-
 import Image from "next/image";
 
 export default function BlogPage({
   blog
 }) {
-  const { title, content, author, publishedAt, relatedArticles, image } = blog;
+  const { title, content, author, publishedAt, image } = blog;
 
   return (
     <>

@@ -5,6 +5,14 @@ import HR from "@/components/HR";
 import ServiceSection from "@/components/Service/ServiceSection";
 import SolutionsSection from "@/components/Solution/SolutionSection";
 
+export const metadata = {
+  title: "Home — ThinkFort IP",
+  description: "Professional IP services by ThinkFort IP.",
+  alternates: {
+    canonical: "https://thinkfortip.netlify.app/",
+  },
+};
+
 export default function Home() {
   return (
     <div className={styles.page}>

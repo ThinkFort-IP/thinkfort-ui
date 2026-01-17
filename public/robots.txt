@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thinkfortip.netlify.app
+
+# Sitemaps
+Sitemap: https://thinkfortip.netlify.app/sitemap.xml

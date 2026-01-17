@@ -13,6 +13,7 @@ export const Navbar = () => {
         { name: 'Service', path: '/service' },
         { name: 'Solution For', path: '/solution' },
         { name: 'Insights', path: '/insights' },
+        { name: 'Contact us', path: '/contact' },
     ];
 
     const ref = React.useRef(null)

@@ -80,7 +80,7 @@ const ProgressBar = ({ step }) => {
 
       <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
         <div
-          className="bg-blue-600 h-2 transition-all duration-300"
+          className="bg-[rgb(var(--brand-green))] h-2 transition-all duration-300"
           style={{ width: `${percentage}%` }}
         />
       </div>
@@ -167,7 +167,7 @@ export default function RequirementMultiStepForm() {
 
         <button
           onClick={resetForm}
-          className="px-3 py-1 border rounded bg-gray-100 text-gray-700 hover:bg-gray-200 transition text-sm"
+          className="px-3 py-2 border rounded bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white transition text-sm"
         >
           Reset
         </button>
@@ -428,7 +428,7 @@ export default function RequirementMultiStepForm() {
         {step > 1 && (
           <button
             onClick={() => setStep(step - 1)}
-            className="px-4 py-2 border rounded"
+            className="px-4 py-2 border rounded bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
           >
             Back
           </button>
@@ -441,8 +441,8 @@ export default function RequirementMultiStepForm() {
             className={`ml-auto px-4 py-2 rounded transition
     ${
       isCurrentStepValid
-        ? "bg-blue-600 text-white hover:bg-blue-700"
-        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+        ? "bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
+        : "bg-gray-300 text-white cursor-not-allowed"
     }`}
           >
             Next
@@ -454,8 +454,8 @@ export default function RequirementMultiStepForm() {
             className={`ml-auto px-4 py-2 rounded transition
     ${
       isCurrentStepValid
-        ? "bg-green-600 text-white hover:bg-green-700"
-        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+        ? "bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
+        : "bg-gray-300 text-white cursor-not-allowed"
     }`}
           >
             Submit

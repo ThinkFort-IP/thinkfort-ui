@@ -125,10 +125,21 @@ export default function RequirementMultiStepForm() {
     return codes.find((code) => phone.startsWith(code)) || "+91";
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     if (!isStepValid(6, formData)) {
       alert("Please accept all declarations before submitting.");
       return;
+    }
+    try {
+      const res = await fetch("/api/forms/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await res.json();
+      console.log(result);
+    } catch (err) {
+      console.error("Form submit error:", err);
     }
     console.log("FORM PAYLOAD →", formData);
     localStorage.removeItem(DRAFT_KEY);

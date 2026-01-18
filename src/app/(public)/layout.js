@@ -1,19 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Footers from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: {
@@ -45,7 +33,7 @@ export const metadata = {
   },
 };
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export default function RootLayout({ children }) {
   return (
     <>

@@ -141,9 +141,10 @@ export default function RequirementMultiStepForm() {
     } catch (err) {
       console.error("Form submit error:", err);
     }
-    console.log("FORM PAYLOAD →", formData);
+    setFormData(initialData);
+    setStep(1);
     localStorage.removeItem(DRAFT_KEY);
-    alert("Form submitted. Check console.");
+    alert("Form submitted");
   };
 
   const resetForm = () => {

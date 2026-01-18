@@ -19,7 +19,7 @@ export default async function SubmissionDetail({ params }) {
 
   return (
     <div className="p-8 max-w-5xl mx-auto">
-      <Link href="/admin" className="text-sm text-blue-600 hover:underline">
+      <Link href="/admin/queries" className="text-sm text-blue-600 hover:underline">
         ← Back to submissions
       </Link>
 

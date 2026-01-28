@@ -17,11 +17,17 @@ export default function AdminNavbar() {
         >
           Submissions
         </Link>
+        <Link
+          href="/admin/support"
+          className="text-sm text-gray-600 hover:text-black"
+        >
+          Support Ticket
+        </Link>
       </div>
 
       <button
         onClick={() => signOut({ callbackUrl: "/admin/login" })}
-        className="text-sm bg-black text-white px-4 py-2 rounded"
+        className="cursor-pointer text-sm bg-black text-white px-4 py-2 rounded"
       >
         Logout
       </button>

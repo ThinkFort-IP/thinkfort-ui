@@ -15,7 +15,7 @@ export const HeroSection = () => {
               End-to-end intellectual property solutions that transform ideas into protected, valuable assets—built for innovators, startups, and enterprises.
           </p>
           <div className="flex items-center gap-4 mt-8 text-sm">
-              <button className="bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white active:scale-95 rounded-md px-7 h-11" onClick={()=> router.push('/contact')}>
+              <button className="cursor-pointer bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white active:scale-95 rounded-md px-7 h-11" onClick={()=> router.push('/contact')}>
                   Get started
               </button>
           </div>

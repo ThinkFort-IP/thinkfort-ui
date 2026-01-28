@@ -6,9 +6,13 @@ import AdminNavbar from "@/components/admin/AdminNavbar";
 export default async function AdminLayout({ children }) {
   const session = await getServerSession(authOptions);
 
-  if (!session || session.user.role !== "admin") {
+  if (
+    !session ||
+    !["admin", "superadmin"].includes(session.user.role)
+  ) {
     redirect("/admin/login");
   }
+
 
   return (
     <div className="min-h-screen bg-gray-100">

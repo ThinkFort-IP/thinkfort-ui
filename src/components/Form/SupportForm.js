@@ -5,8 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 
 export default function SupportForm() {
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();

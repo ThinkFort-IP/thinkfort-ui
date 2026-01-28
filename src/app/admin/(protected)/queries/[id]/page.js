@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 async function getSubmission(id) {
+
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/forms/${id}`,
     { cache: "no-store" }
@@ -14,7 +15,7 @@ async function getSubmission(id) {
 }
 
 export default async function SubmissionDetail({ params }) {
-    const { id } = await params;
+  const { id } = await params;
   const data = await getSubmission(id);
 
   return (

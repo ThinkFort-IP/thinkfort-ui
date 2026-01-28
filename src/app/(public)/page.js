@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/HeroSection";
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import BlogSection from "@/components/Blog/BlogSection";
 import HR from "@/components/HR";
 import ServiceSection from "@/components/Service/ServiceSection";

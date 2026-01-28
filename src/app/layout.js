@@ -1,7 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "../components/Navbar";
-import Footers from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Script from "next/script";
 
@@ -71,10 +69,8 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Navbar />
         <GoogleAnalytics />
         {children}
-        <Footers />
       </body>
     </html>
   );

@@ -1,8 +1,10 @@
 "use client";
-
+import { toast } from "react-toastify";
 export function DeleteSubmissionButton({ id }) {
   async function handleDelete() {
-    const confirmed = confirm("Are you sure you want to delete this submission?");
+    const confirmed = confirm(
+      "Are you sure you want to delete this submission?"
+    );
     if (!confirmed) return;
 
     const res = await fetch(`/api/forms/delete/${id}`, {
@@ -10,11 +12,13 @@ export function DeleteSubmissionButton({ id }) {
     });
 
     if (!res.ok) {
-      alert("Failed to delete submission");
+      toast.error("Failed to delete submission");
       return;
     }
-
-    location.reload(); // refresh table
+    toast.success("Inquiry deleted successfully ");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
   }
 
   return (

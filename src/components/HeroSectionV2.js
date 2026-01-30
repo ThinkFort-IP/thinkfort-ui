@@ -185,8 +185,6 @@ const HeroSectionV2 = () => {
                 width={715}
                 height={392}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-3xl" />
-
               <div className="flex flex-col sm:flex-row-reverse">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

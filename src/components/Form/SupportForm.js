@@ -9,8 +9,7 @@ export default function SupportForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    setError("");
-    setSuccess(false);
+
 
     const formData = new FormData(e.currentTarget);
 
@@ -32,11 +31,9 @@ export default function SupportForm() {
       if (!res.ok) throw new Error(data.message || "Something went wrong");
 
       toast.success("Support request submitted successfully.");
-      setSuccess(true);
       e.target.reset();
     } catch (err) {
       toast.error(err.message);
-      setError(err.message);
     } finally {
       setLoading(false);
     }

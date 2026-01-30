@@ -106,7 +106,7 @@ const HeroSectionV2 = () => {
   };
   useEffect(() => {
     const timer = setInterval(() => {
-      paginate(1);
+      // paginate(1);
     }, 4000);
     return () => clearInterval(timer);
   }, [page]);
@@ -145,7 +145,7 @@ const HeroSectionV2 = () => {
             onDragEnd={handleDragEnd}
             className="absolute inset-0 grid lg:grid-cols-2 gap-6 items-center"
           >
-            <div className="space-y-10 px-15 mt-35">
+            <div className="space-y-10 px-15 xl:mt-10 mt-35">
               <div>
                 <h1 className="text-3xl lg:text-4xl 2xl:text-6xl font-heading text-card-foreground mb-6 leading-tight">
                   {sliderContent[page].title}
@@ -172,19 +172,10 @@ const HeroSectionV2 = () => {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-5">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 cursor-pointer bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white rounded-xl font-body shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-                  onClick={() => router.push("/contact/")}
-                >
-                  Get started
-                </motion.button>
-              </div>
+              
             </div>
 
-            <motion.div className="relative px-15">
+            <motion.div className="space-y-10 px-15 mt-10">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-chart-1/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-chart-2/20 rounded-full blur-3xl" />
               <Image
@@ -195,6 +186,17 @@ const HeroSectionV2 = () => {
                 height={392}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-3xl" />
+
+              <div className="flex flex-col sm:flex-row-reverse">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 cursor-pointer bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white rounded-xl font-body shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+                  onClick={() => router.push("/contact/")}
+                >
+                  Get started
+                </motion.button>
+              </div>
             </motion.div>
           </motion.div>
         </AnimatePresence>

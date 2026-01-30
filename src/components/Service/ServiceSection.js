@@ -11,7 +11,7 @@ export default function ServiceSection() {
         End-to-end solutions to protect, manage, and grow your intellectual property
       </p>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-15 px-4 md:px-0">
+      <div className="flex flex-wrap justify-center gap-6 mt-15 px-20">
         {services &&
           services.map((service) => (
             <ServiceCard service={service} key={service.id}/>

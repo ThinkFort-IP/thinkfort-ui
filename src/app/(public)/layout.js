@@ -1,6 +1,4 @@
-import "../globals.css";
 import Footers from "@/components/Footer";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata = {
@@ -38,7 +36,6 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Navbar />
-      <GoogleAnalytics />
       {children}
       <Footers />
     </>

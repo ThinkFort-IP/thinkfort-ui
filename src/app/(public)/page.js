@@ -4,6 +4,7 @@ import BlogSection from "@/components/Blog/BlogSection";
 import HR from "@/components/HR";
 import ServiceSection from "@/components/Service/ServiceSection";
 import SolutionsSection from "@/components/Solution/SolutionSection";
+import MetricsSection from "@/components/Metrics/MetricsSection";
 
 export const metadata = {
   title: "Home — ThinkFort IP",
@@ -24,6 +25,9 @@ export default function Home() {
         <ServiceSection />
         <HR />
         <SolutionsSection />
+        <HR />
+        <MetricsSection />
+        <HR />
       </main>
     </div>
   );

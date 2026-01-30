@@ -106,7 +106,7 @@ const HeroSectionV2 = () => {
   };
   useEffect(() => {
     const timer = setInterval(() => {
-      // paginate(1);
+      paginate(1);
     }, 4000);
     return () => clearInterval(timer);
   }, [page]);

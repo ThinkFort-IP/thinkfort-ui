@@ -16,10 +16,11 @@ import {
   FaSitemap,
   FaHandsHelping,
 } from "react-icons/fa";
-
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const HeroSectionV2 = () => {
+  const router = useRouter();
   const [[page, direction], setPage] = useState([0, 0]);
   const [dragStart, setDragStart] = useState(null);
 
@@ -125,7 +126,7 @@ const HeroSectionV2 = () => {
   };
 
   return (
-    <div className="relative min-h-355 lg:min-h-250 xl:min-h-195 2xl:min-h-screen overflow-hidden">
+    <div className="relative min-h-355 lg:min-h-250 xl:min-h-200 2xl:min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-[rgb(var(--brand-green))] opacity-5 bg-cover bg-center mix-blend-overlay" />
 
       <div className="container px-4 py-20 lg:py-28">
@@ -176,6 +177,7 @@ const HeroSectionV2 = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 cursor-pointer bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white rounded-xl font-body shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+                  onClick={() => router.push("/contact/")}
                 >
                   Get started
                 </motion.button>

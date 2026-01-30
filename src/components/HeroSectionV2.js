@@ -125,7 +125,7 @@ const HeroSectionV2 = () => {
   };
 
   return (
-    <div className="relative min-h-355 xl:min-h-screen overflow-hidden">
+    <div className="relative min-h-355 lg:min-h-250 xl:min-h-195 2xl:min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-[rgb(var(--brand-green))] opacity-5 bg-cover bg-center mix-blend-overlay" />
 
       <div className="container px-4 py-20 lg:py-28">
@@ -146,10 +146,10 @@ const HeroSectionV2 = () => {
           >
             <div className="space-y-10 px-15 mt-35">
               <div>
-                <h1 className="text-3xl lg:text-4xl font-heading text-card-foreground mb-6 leading-tight">
+                <h1 className="text-3xl lg:text-4xl 2xl:text-6xl font-heading text-card-foreground mb-6 leading-tight">
                   {sliderContent[page].title}
                 </h1>
-                <p className="text-lg text-muted-foreground/90">
+                <p className="text-lg 2xl:text-2xl text-muted-foreground/90">
                   {sliderContent[page].subtitle}
                 </p>
               </div>
@@ -163,8 +163,8 @@ const HeroSectionV2 = () => {
                     transition={{ delay: index * 0.5 }}
                     className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all duration-300"
                   >
-                    <area.icon className="text-[rgb(var(--brand-gold))] text-3xl" />
-                    <span className="text-lg font-body text-card-foreground">
+                    <area.icon className="text-[rgb(var(--brand-gold))] text-2xl" />
+                    <span className="text-md font-body text-card-foreground">
                       {area.label}
                     </span>
                   </motion.div>

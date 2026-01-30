@@ -1,0 +1,28 @@
+"use client";
+
+export function DeleteSubmissionButton({ id }) {
+  async function handleDelete() {
+    const confirmed = confirm("Are you sure you want to delete this submission?");
+    if (!confirmed) return;
+
+    const res = await fetch(`/api/forms/delete/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!res.ok) {
+      alert("Failed to delete submission");
+      return;
+    }
+
+    location.reload(); // refresh table
+  }
+
+  return (
+    <button
+      onClick={handleDelete}
+      className="cursor-pointer text-red-600 hover:underline"
+    >
+      Delete
+    </button>
+  );
+}

@@ -1,31 +1,29 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { DeleteSubmissionButton } from "@/components/admin/DeleteSubmissionButton";
-// import DeleteSubmissionButton from "@/components/admin/DeleteSubmissionButton";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
+import { DeleteSupportTicketButton } from "@/components/admin/DeleteSupportTicketButton";
 
-async function getSubmissions() {
+async function getTickets() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/forms/list`,
-    {
-      cache: "no-store",
-    }
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/support/list`,
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch submissions");
+    throw new Error("Failed to fetch support tickets");
   }
 
   return res.json();
 }
 
-export default async function AdminDashboard() {
-  const submissions = await getSubmissions();
+export default async function AdminSupportPage() {
+  const tickets = await getTickets();
   const session = await getServerSession(authOptions);
   const isSuperAdmin = session?.user.role === "superadmin";
+
   return (
     <div className="mt-35 mb-20 p-8">
-      <h1 className="text-2xl font-semibold mb-6">Form Submissions</h1>
+      <h1 className="text-2xl font-semibold mb-6">Support Queries</h1>
 
       <div className="overflow-x-auto border rounded-lg">
         <table className="min-w-full text-sm">
@@ -33,39 +31,35 @@ export default async function AdminDashboard() {
             <tr>
               <th className="p-3">Name</th>
               <th className="p-3">Email</th>
-              <th className="p-3">Phone</th>
-              <th className="p-3">Services</th>
-              <th className="p-3">Jurisdiction</th>
+              <th className="p-3">Status</th>
               <th className="p-3">Submitted</th>
-              <th className="p-3">Consent</th>
-              <th className="p-3">View Full Submission</th>
+              <th className="p-3">View</th>
               {isSuperAdmin && <th className="p-3">Delete</th>}
             </tr>
           </thead>
 
           <tbody>
-            {submissions.map((item) => (
+            {tickets.map((item) => (
               <tr key={item._id} className="border-t hover:bg-gray-50">
                 <td className="p-3">{item.fullName}</td>
                 <td className="p-3">{item.email}</td>
-                <td className="p-3">{item.phone || "-"}</td>
                 <td className="p-3">
-                  {item.services?.length ? item.services.join(", ") : "-"}
-                </td>
-                <td className="p-3">
-                  {item.jurisdiction?.length
-                    ? item.jurisdiction.join(", ")
-                    : "-"}
+                  <span
+                    className={`px-2 py-1 rounded text-xs font-medium ${
+                      item.status === "open"
+                        ? "bg-yellow-100 text-yellow-800"
+                        : "bg-green-100 text-green-800"
+                    }`}
+                  >
+                    {item.status}
+                  </span>
                 </td>
                 <td className="p-3">
                   {new Date(item.createdAt).toLocaleDateString()}
                 </td>
                 <td className="p-3">
-                  {item.consent?.contactConsent ? "✅" : "❌"}
-                </td>
-                <td className="p-3">
                   <Link
-                    href={`/admin/queries/${item._id}`}
+                    href={`/admin/support/${item._id}`}
                     className="text-blue-600 hover:underline"
                   >
                     View
@@ -73,7 +67,7 @@ export default async function AdminDashboard() {
                 </td>
                 {isSuperAdmin && (
                   <td className="p-3">
-                    <DeleteSubmissionButton id={item._id}/>
+                    <DeleteSupportTicketButton id={item._id} />
                   </td>
                 )}
               </tr>
@@ -82,8 +76,8 @@ export default async function AdminDashboard() {
         </table>
       </div>
 
-      {submissions.length === 0 && (
-        <p className="text-gray-500 mt-6">No submissions yet.</p>
+      {tickets.length === 0 && (
+        <p className="text-gray-500 mt-6">No support tickets yet.</p>
       )}
     </div>
   );

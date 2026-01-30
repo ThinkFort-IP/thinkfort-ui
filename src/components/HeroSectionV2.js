@@ -125,7 +125,7 @@ const HeroSectionV2 = () => {
   };
 
   return (
-    <div className="relative min-h-355 lg:min-h-screen overflow-hidden">
+    <div className="relative min-h-355 xl:min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-[rgb(var(--brand-green))] opacity-5 bg-cover bg-center mix-blend-overlay" />
 
       <div className="container px-4 py-20 lg:py-28">
@@ -144,12 +144,12 @@ const HeroSectionV2 = () => {
             onDragEnd={handleDragEnd}
             className="absolute inset-0 grid lg:grid-cols-2 gap-6 items-center"
           >
-            <div className="space-y-10 px-15 mt-35 lg:mt-0">
+            <div className="space-y-10 px-15 mt-35">
               <div>
-                <h1 className="text-5xl lg:text-6xl font-heading text-card-foreground mb-6 leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-heading text-card-foreground mb-6 leading-tight">
                   {sliderContent[page].title}
                 </h1>
-                <p className="text-2xl text-muted-foreground/90">
+                <p className="text-lg text-muted-foreground/90">
                   {sliderContent[page].subtitle}
                 </p>
               </div>

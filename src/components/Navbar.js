@@ -21,7 +21,7 @@ export const Navbar = () => {
 
     return (
         <div ref={ref} className="overflow-y-scroll">
-            <nav className={`fixed top-0 left-0 bg-[rgb(var(--navbar-color))] w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 shadow-md text-gray-700 bg-white backdrop-blur-lg py-3 md:py-4`}>
+            <nav className={`fixed top-0 left-0 bg-[rgb(var(--navbar-color))] w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 shadow-md text-gray-700 py-3 md:py-4`}>
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">

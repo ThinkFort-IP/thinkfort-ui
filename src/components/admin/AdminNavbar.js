@@ -23,6 +23,12 @@ export default function AdminNavbar() {
         >
           Support Ticket
         </Link>
+        <Link
+          href="/admin/subscriptions"
+          className="text-sm text-gray-600 hover:text-black"
+        >
+          Newsletter Subscriptions
+        </Link>
       </div>
 
       <button

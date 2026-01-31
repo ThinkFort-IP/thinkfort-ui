@@ -1,17 +1,53 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
-
+import { toast, ToastContainer } from "react-toastify";
+import { useState } from "react";
 export default function Footer() {
+  
+  const [email, setEmail] = useState("");
+  const validateEmail = (value) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast.error("Email is required");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    const payload = {
+      email: email
+    };
+
+    try {
+      const res = await fetch("/api/subscriptions/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Something went wrong");
+      toast.success("Thanks for subscribing!");
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setEmail("");
+    }
+  };
+
   return (
     <>
-      <style>{`
-                @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-            
-                * {
-                    font-family: "Poppins", sans-serif;
-                }
-            `}</style>
+      <ToastContainer />
       <footer
         className="bg-black py-12 px-4 sm:px-6 lg:px-8"
         style={{ backgroundColor: "gainsboro" }}
@@ -23,8 +59,8 @@ export default function Footer() {
                 <Image
                   src="/logo.png"
                   alt="Description of my image"
-                  width={157} // Specify the width of the image
-                  height={40} // Specify the height of the image
+                  width={157}
+                  height={40}
                 />
               </Link>
 
@@ -124,20 +160,24 @@ export default function Footer() {
               <h3 className="text-sm text-[rgb(var(--brand-green))] font-medium">
                 Subscribe for news
               </h3>
-              <div className="flex items-center border gap-2 border-[rgb(var(--brand-green))] h-13 max-w-80 w-full rounded-full overflow-hidden mt-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email.."
-                  className="w-full h-full pl-6 outline-none text-sm bg-transparent text-[rgb(var(--brand-green))] placeholder-[rgb(var(--brand-green))] placeholder:text-xs"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] active:scale-95 transition w-56 h-10 rounded-full text-sm text-white cursor-pointer mr-1.5"
-                >
-                  Subscribe
-                </button>
-              </div>
+              <form onSubmit={handleSubscribe} className="w-full max-w-80 mt-4">
+                <div className="flex items-center border gap-2 border-[rgb(var(--brand-green))] h-13 max-w-80 w-full rounded-full overflow-hidden mt-4">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email.."
+                    className="w-full h-full pl-6 outline-none text-sm bg-transparent text-[rgb(var(--brand-green))] placeholder-[rgb(var(--brand-green))] placeholder:text-xs"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] active:scale-95 transition w-56 h-10 rounded-full text-sm text-white cursor-pointer mr-1.5"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 

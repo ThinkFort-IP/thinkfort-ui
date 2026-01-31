@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import countries from "@/data/countries.json"; // your generated 245-country JSON
+import { ToastContainer, toast } from "react-toastify";
+import countries from "@/data/countries.json";
 
 const DRAFT_KEY = "ip_enquiry_draft";
 const TOTAL_STEPS = 6;
@@ -70,21 +71,24 @@ const ProgressBar = ({ step }) => {
   const percentage = Math.round((step / TOTAL_STEPS) * 100);
 
   return (
-    <div className="mb-6">
-      <div className="flex justify-between text-xs text-gray-600 mb-1">
-        <span>
-          Step {step} of {TOTAL_STEPS}
-        </span>
-        <span>{percentage}% completed</span>
-      </div>
+    <>
+      <ToastContainer />
+      <div className="mb-6">
+        <div className="flex justify-between text-xs text-gray-600 mb-1">
+          <span>
+            Step {step} of {TOTAL_STEPS}
+          </span>
+          <span>{percentage}% completed</span>
+        </div>
 
-      <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-        <div
-          className="bg-[rgb(var(--brand-green))] h-2 transition-all duration-300"
-          style={{ width: `${percentage}%` }}
-        />
+        <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+          <div
+            className="bg-[rgb(var(--brand-green))] h-2 transition-all duration-300"
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -127,7 +131,7 @@ export default function RequirementMultiStepForm() {
 
   const submitForm = async () => {
     if (!isStepValid(6, formData)) {
-      alert("Please accept all declarations before submitting.");
+      toast.error("Please accept all declarations before submitting.");
       return;
     }
     try {
@@ -144,7 +148,7 @@ export default function RequirementMultiStepForm() {
     setFormData(initialData);
     setStep(1);
     localStorage.removeItem(DRAFT_KEY);
-    alert("Form submitted");
+    toast.success("Inquiry Form submitted successfully.");
   };
 
   const resetForm = () => {

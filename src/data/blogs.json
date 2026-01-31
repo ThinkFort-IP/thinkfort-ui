@@ -2,8 +2,8 @@
   {
     "id": 3,
     "author": {
-      "name": "Vishal Kumar Yadav",
-      "role": "Co Founder",
+      "name": "Shailesh Singh",
+      "role": "Patent Analyst",
       "avatar": "/dp-placeholder.jpg"
     },
     "publishedAt": {
@@ -73,8 +73,8 @@
   {
     "id": 2,
     "author": {
-      "name": "Ekansh Nigam",
-      "role": "Founder",
+      "name": "Satyam Tiwari",
+      "role": "Patent Attorney",
       "avatar": "/dp-placeholder.jpg"
     },
     "publishedAt": {
@@ -175,8 +175,8 @@
   {
     "id": 1,
     "author": {
-      "name": "Pranjal Tripathi",
-      "role": "Co Founder",
+      "name": "Ritika Gupta",
+      "role": "Senior Patent Analyst",
       "avatar": "/dp-placeholder.jpg"
     },
     "publishedAt": {

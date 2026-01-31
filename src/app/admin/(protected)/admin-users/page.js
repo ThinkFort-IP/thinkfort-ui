@@ -43,7 +43,7 @@ export default async function Page() {
                 <tr key={item._id} className="border-t hover:bg-gray-50">
                   <td className="p-3">{item.email}</td>
                   <td className="p-3">{item.role}</td>
-                  {isSuperAdmin && (
+                  {isSuperAdmin && item.role !== 'superadmin' && (
                     <td className="p-3">
                       <AdminActionButton
                         id={item._id}

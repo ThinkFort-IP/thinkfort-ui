@@ -1,8 +1,8 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { DeleteSubmissionButton } from "@/components/admin/DeleteSubmissionButton";
 import { ToastContainer } from "react-toastify";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { AdminActionButton } from "@/components/admin/AdminActionButton";
 
 async function getSubmissions() {
   const res = await fetch(
@@ -19,7 +19,7 @@ async function getSubmissions() {
   return res.json();
 }
 
-export default async function AdminDashboard() {
+export default async function Page() {
   const submissions = await getSubmissions();
   const session = await getServerSession(authOptions);
   const isSuperAdmin = session?.user.role === "superadmin";
@@ -75,7 +75,13 @@ export default async function AdminDashboard() {
                   </td>
                   {isSuperAdmin && (
                     <td className="p-3">
-                      <DeleteSubmissionButton id={item._id} />
+                      <AdminActionButton
+                        id={item._id}
+                        endpoint="/api/forms/delete"
+                        confirmMessage="Are you sure you want to delete this submission?"
+                        successMessage="Inquiry deleted successfully"
+                        errorMessage="Failed to delete submission"
+                      />
                     </td>
                   )}
                 </tr>

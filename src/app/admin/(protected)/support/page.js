@@ -1,9 +1,8 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
-
-import { DeleteSupportTicketButton } from "@/components/admin/DeleteSupportTicketButton";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { ToastContainer } from "react-toastify";
+import { AdminActionButton } from "@/components/admin/AdminActionButton";
 
 async function getTickets() {
   const res = await fetch(
@@ -18,7 +17,7 @@ async function getTickets() {
   return res.json();
 }
 
-export default async function AdminSupportPage() {
+export default async function Page() {
   const tickets = await getTickets();
   const session = await getServerSession(authOptions);
   const isSuperAdmin = session?.user.role === "superadmin";
@@ -71,7 +70,13 @@ export default async function AdminSupportPage() {
                   </td>
                   {isSuperAdmin && (
                     <td className="p-3">
-                      <DeleteSupportTicketButton id={item._id} />
+                      <AdminActionButton
+                        id={item._id}
+                        endpoint="/api/support/delete"
+                        confirmMessage="Are you sure you want to delete this ticket?"
+                        successMessage="Ticket deleted successfully"
+                        errorMessage="Failed to delete ticket"
+                      />
                     </td>
                   )}
                 </tr>

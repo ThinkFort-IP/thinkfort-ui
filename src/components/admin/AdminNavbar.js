@@ -29,6 +29,18 @@ export default function AdminNavbar() {
         >
           Newsletter Subscriptions
         </Link>
+        <Link
+          href="/admin/admin-users"
+          className="text-sm text-gray-600 hover:text-black"
+        >
+          Admin Users
+        </Link>
+        <Link
+          href="/admin/portal-users"
+          className="text-sm text-gray-600 hover:text-black"
+        >
+          Portal Users
+        </Link>
       </div>
 
       <button

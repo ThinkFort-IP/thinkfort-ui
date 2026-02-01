@@ -50,9 +50,9 @@ export default async function Page() {
                       <AdminActionButton
                         id={item._id}
                         endpoint="/api/subscriptions/delete"
-                        confirmMessage="Are you sure you want to delete this Subscriptions?"
-                        successMessage="Subscriptions deleted successfully"
-                        errorMessage="Failed to delete Subscriptions"
+                        confirmMessage="Are you sure you want to delete this Subscription?"
+                        successMessage="Subscription deleted successfully"
+                        errorMessage="Failed to delete Subscription"
                       />
                     </td>
                   )}

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://thinkfortip.netlify.app
+Host: https://thinkfortip.com
 
 # Sitemaps
-Sitemap: https://thinkfortip.netlify.app/sitemap.xml
+Sitemap: https://thinkfortip.com/sitemap.xml

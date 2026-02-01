@@ -13,16 +13,16 @@ export async function generateMetadata({ params }) {
     title: `${service.title} | ThinkFort IP`,
     description: service.excerpt,
     alternates: {
-      canonical: `https://thinkfortip.netlify.app/service/${slug}`,
+      canonical: `https://thinkfortip.com/service/${slug}`,
     },
     openGraph: {
       title: `${service.title} | ThinkFort IP`,
       description: service.excerpt,
-      url: `https://thinkfortip.netlify.app/service/${slug}`,
+      url: `https://thinkfortip.com/service/${slug}`,
       type: "article",
       images: [
         {
-          url: `https://thinkfortip.netlify.app${service.image || "/logo.png"}`,
+          url: `https://thinkfortip.com${service.image || "/logo.png"}`,
           width: 1200,
           height: 630,
         },
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
       title: `${service.title} | ThinkFort IP`,
       description: service.excerpt,
       images: [
-        `https://thinkfortip.netlify.app${service.image || "/logo.png"}`,
+        `https://thinkfortip.com${service.image || "/logo.png"}`,
       ],
     },
   };
@@ -55,12 +55,12 @@ export default async function Page({ params }) {
             "@type": "Service",
             name: service.title,
             description: service.excerpt,
-            url: `https://thinkfortip.netlify.app/service/${service.slug}`,
+            url: `https://thinkfortip.com/service/${service.slug}`,
             provider: {
               "@type": "Organization",
               name: "ThinkFort",
-              url: "https://thinkfortip.netlify.app",
-              logo: "https://thinkfortip.netlify.app/logo.png",
+              url: "https://thinkfortip.com",
+              logo: "https://thinkfortip.com/logo.png",
             },
           }),
         }}

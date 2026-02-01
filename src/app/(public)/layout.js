@@ -12,11 +12,11 @@ export const metadata = {
     title: "ThinkFort IP – IP Services",
     description:
       "ThinkFort IP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
-    url: "https://thinkfortip.netlify.app/",
+    url: "https://thinkfortip.com/",
     siteName: "ThinkFort",
     images: [
       {
-        url: "https://thinkfortip.netlify.app/logo.png",
+        url: "https://thinkfortip.com/logo.png",
         width: 1200,
         height: 630,
       },
@@ -27,7 +27,7 @@ export const metadata = {
     card: "summary_large_image",
   },
   alternates: {
-    canonical: "https://thinkfortip.netlify.app",
+    canonical: "https://thinkfortip.com",
   },
 };
 

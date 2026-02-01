@@ -8,7 +8,7 @@ export const metadata = {
     "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
 
   alternates: {
-    canonical: "https://thinkfortip.netlify.app/service",
+    canonical: "https://thinkfortip.com/service",
   },
 
   robots: {
@@ -20,7 +20,7 @@ export const metadata = {
     title: "Our Services | ThinkFort IP",
     description:
       "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
-    url: "https://thinkfortip.netlify.app/service",
+    url: "https://thinkfortip.com/service",
     type: "website",
   },
 
@@ -29,7 +29,7 @@ export const metadata = {
     title: "Our Services | ThinkFort IP",
     description:
       "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
-    images: ["https://thinkfortip.netlify.app/logo.png"],
+    images: ["https://thinkfortip.com/logo.png"],
   },
 };
 
@@ -44,13 +44,13 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "ItemList",
             name: "ThinkFort Services",
-            url: "https://thinkfortip.netlify.app/service",
+            url: "https://thinkfortip.com/service",
             description:
               "Professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
             itemListElement: services.map((service, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: `https://thinkfortip.netlify.app/service#${service.slug}`,
+              url: `https://thinkfortip.com/service#${service.slug}`,
               name: service.title,
               description: service.excerpt,
             })),

@@ -30,7 +30,7 @@ export default async function Page({ params }) {
             "@type": "Article",
             headline: blog.title,
             description: blog.excerpt,
-            image: `thinkfortip.netlify.app${blog.image}`,
+            image: `thinkfortip.com${blog.image}`,
             author: {
               "@type": "Organization",
               name: "ThinkFort",
@@ -40,13 +40,13 @@ export default async function Page({ params }) {
               name: "ThinkFort",
               logo: {
                 "@type": "ImageObject",
-                url: "thinkfortip.netlify.app/logo.png",
+                url: "thinkfortip.com/logo.png",
               },
             },
             datePublished: blog.publishedAt?.iso,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `thinkfortip.netlify.app/insights/${blog.slug}`,
+              "@id": `thinkfortip.com/insights/${blog.slug}`,
             },
           }),
         }}

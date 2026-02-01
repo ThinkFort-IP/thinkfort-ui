@@ -6,7 +6,7 @@ const solutions = require(path.resolve('./src/data/solutions.json'));
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://thinkfortip.netlify.app",
+  siteUrl: "https://thinkfortip.com",
   generateRobotsTxt: true, // generates robots.txt
   sitemapSize: 5000,
   changefreq: "daily",

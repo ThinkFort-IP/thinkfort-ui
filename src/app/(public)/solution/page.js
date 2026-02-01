@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
   alternates: {
-    canonical: "https://thinkfortip.netlify.app/solution",
+    canonical: "https://thinkfortip.com/solution",
   },
   robots: {
     index: true,
@@ -17,7 +17,7 @@ export const metadata = {
     title: "Our Solutions | ThinkFort IP",
     description:
       "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
-    url: "https://thinkfortip.netlify.app/solution",
+    url: "https://thinkfortip.com/solution",
     type: "website",
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata = {
     title: "Our Solutions | ThinkFort IP",
     description:
       "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
-    images: ["https://thinkfortip.netlify.app/logo.png"],
+    images: ["https://thinkfortip.com/logo.png"],
   },
 };
 
@@ -40,13 +40,13 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "ItemList",
             name: "ThinkFort Solutions",
-            url: "https://thinkfortip.netlify.app/solutions",
+            url: "https://thinkfortip.com/solutions",
             description:
               "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
             itemListElement: solutions.map((solution, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: `https://thinkfortip.netlify.app/solutions/${solution.slug}`,
+              url: `https://thinkfortip.com/solutions/${solution.slug}`,
               name: solution.title,
               description: solution.excerpt,
             })),

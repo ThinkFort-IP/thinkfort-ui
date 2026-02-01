@@ -12,7 +12,7 @@ export const metadata = {
   title: "Home — ThinkFort IP",
   description: "Professional IP services by ThinkFort IP.",
   alternates: {
-    canonical: "https://thinkfortip.netlify.app/",
+    canonical: "https://thinkfortip.com/",
   },
 };
 

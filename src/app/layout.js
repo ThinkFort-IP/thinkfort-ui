@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://thinkfortip.com"),
   title: {
     default: "ThinkFort IP – IP Services",
     template: "%s | ThinkFort IP",

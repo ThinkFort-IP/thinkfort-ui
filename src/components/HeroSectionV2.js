@@ -126,7 +126,7 @@ const HeroSectionV2 = () => {
   };
 
   return (
-    <div className="relative min-h-355 lg:min-h-250 xl:min-h-200 2xl:min-h-screen overflow-hidden">
+    <div className="relative min-h-310 md:min-h-350 lg:min-h-250 xl:min-h-200 2xl:min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-[rgb(var(--brand-green))] opacity-5 bg-cover bg-center mix-blend-overlay" />
 
       <div className="container px-4 py-20 lg:py-28">
@@ -145,7 +145,7 @@ const HeroSectionV2 = () => {
             onDragEnd={handleDragEnd}
             className="absolute inset-0 grid lg:grid-cols-2 gap-6 items-center"
           >
-            <div className="space-y-10 px-15 xl:mt-10 mt-35">
+            <div className="space-y-10 px-15 xl:mt-10 mt-25 md:mt-35">
               <div>
                 <h1 className="text-3xl lg:text-4xl 2xl:text-6xl font-heading text-card-foreground mb-6 leading-tight">
                   {sliderContent[page].title}
@@ -175,9 +175,7 @@ const HeroSectionV2 = () => {
               
             </div>
 
-            <motion.div className="space-y-10 px-15 mt-10">
-              <div className="absolute -top-10 -left-10 w-40 h-40 bg-chart-1/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-chart-2/20 rounded-full blur-3xl" />
+            <motion.div className="space-y-10 px-15">
               <Image
                 src={sliderContent[page].image}
                 alt="Tech Training"

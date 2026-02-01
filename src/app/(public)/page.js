@@ -1,4 +1,3 @@
-import { HeroSection } from "@/components/HeroSection";
 import styles from "../page.module.css";
 import BlogSection from "@/components/Blog/BlogSection";
 import HR from "@/components/HR";
@@ -12,7 +11,7 @@ export const metadata = {
   title: "Home — ThinkFort IP",
   description: "Professional IP services by ThinkFort IP.",
   alternates: {
-    canonical: "https://thinkfortip.com/",
+    canonical: "https://thinkfortip.com",
   },
 };
 

@@ -172,7 +172,7 @@ export default function RequirementMultiStepForm() {
 
         <button
           onClick={resetForm}
-          className="px-3 py-2 border rounded bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white transition text-sm"
+          className="cursor-pointer px-3 py-2 border rounded-full bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white transition text-sm"
         >
           Reset
         </button>
@@ -433,7 +433,7 @@ export default function RequirementMultiStepForm() {
         {step > 1 && (
           <button
             onClick={() => setStep(step - 1)}
-            className="px-4 py-2 border rounded bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
+            className="cursor-pointer px-4 py-2 border rounded-full bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
           >
             Back
           </button>
@@ -446,8 +446,8 @@ export default function RequirementMultiStepForm() {
             className={`ml-auto px-4 py-2 rounded transition
     ${
       isCurrentStepValid
-        ? "bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
-        : "bg-gray-300 text-white cursor-not-allowed"
+        ? "cursor-pointer rounded-full bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
+        : "bg-gray-300 text-white cursor-not-allowed rounded-full"
     }`}
           >
             Next
@@ -459,8 +459,8 @@ export default function RequirementMultiStepForm() {
             className={`ml-auto px-4 py-2 rounded transition
     ${
       isCurrentStepValid
-        ? "bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white"
-        : "bg-gray-300 text-white cursor-not-allowed"
+        ? "cursor-pointer bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white rounded-full"
+        : "bg-gray-300 text-white cursor-not-allowed rounded-full"
     }`}
           >
             Submit

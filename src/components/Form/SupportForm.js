@@ -96,7 +96,7 @@ export default function SupportForm() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-5 bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white py-2.5 w-full rounded-full transition disabled:opacity-60"
+            className="cursor-pointer mt-5 bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] text-white py-2.5 w-full rounded-full transition disabled:opacity-60"
           >
             {loading ? "Submitting..." : "Submit Support Request"}
           </button>

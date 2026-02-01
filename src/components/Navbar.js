@@ -74,7 +74,7 @@ export const Navbar = () => {
                         </Link>
                     ))}
 
-                    <button className="bg-[rgb(var(--brand-green))] text-white px-8 py-2.5 rounded-full transition-all duration-500">
+                    <button className="bg-[rgb(var(--brand-green))] text-white px-8 py-2.5 rounded-full transition-all duration-500" onClick={()=> router.push('/login')}>
                         Login
                     </button>
                 </div>

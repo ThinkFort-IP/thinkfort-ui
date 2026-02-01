@@ -9,40 +9,47 @@ import { RetentionChart } from "./RetentionChart";
 function Counter({ value, suffix }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    let observer;
-    let interval;
+    if (!ref.current) return;
 
-    observer = new IntersectionObserver(
+    const animate = () => {
+      let start = 0;
+      const duration = 1200;
+      const step = 16;
+      const increment = value / (duration / step);
+
+      clearInterval(intervalRef.current);
+
+      intervalRef.current = setInterval(() => {
+        start += increment;
+        if (start >= value) {
+          setCount(value);
+          clearInterval(intervalRef.current);
+        } else {
+          setCount(Math.floor(start));
+        }
+      }, step);
+    };
+
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          let start = 0;
-          const duration = 1200;
-          const step = 16;
-          const increment = value / (duration / step);
-
-          interval = setInterval(() => {
-            start += increment;
-            if (start >= value) {
-              setCount(value);
-              clearInterval(interval);
-            } else {
-              setCount(Math.floor(start));
-            }
-          }, step);
-
-          observer.disconnect();
+          setCount(0); 
+          animate();
+        } else {
+          clearInterval(intervalRef.current);
         }
       },
       { threshold: 0.4 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(ref.current);
 
     return () => {
-      observer && observer.disconnect();
-      interval && clearInterval(interval);
+      observer.disconnect();
+      clearInterval(intervalRef.current);
     };
   }, [value]);
 
@@ -109,9 +116,12 @@ export default function MetricsSection() {
             See more
           </Link>
         ) : (
-          <div className="grid md:grid-cols-2 gap-50 px-10">
-            <StatsBarChart />
-            <RetentionChart />
+          <div >
+            <p className="flex flex-wrap items-center justify-center gap-8 pt-12 mb-20 text-gray-800 text-3xl font-semibold sm:text-4xl">Metrics</p>
+            <div className="grid md:grid-cols-2 gap-50 px-10">
+              <StatsBarChart />
+              <RetentionChart />
+            </div>
           </div>
         )}
       </div>

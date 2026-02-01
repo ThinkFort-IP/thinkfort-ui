@@ -136,6 +136,9 @@ export default function TestimonialsSection() {
             .marquee-reverse {
                 animation-direction: reverse;
             }
+            .marquee-inner:hover {
+                animation-play-state: paused;
+            }
         `}</style>
       <div className="mb-20">
         <h1 className="font-semibold text-gray-900 text-3xl sm:text-4xl text-center mx-auto">

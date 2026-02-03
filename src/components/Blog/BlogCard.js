@@ -58,6 +58,7 @@ export default function BlogCard(props) {
           <Link
             href={"/insights/" + props.blog.slug}
             className="inline-flex items-center text-sm font-medium text-center text-[rgb(var(--brand-green))] hover:text-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300"
+            aria-label={"Read full article about" + props.blog.title}
           >
             Read more
             <svg

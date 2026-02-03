@@ -9,13 +9,13 @@ export async function generateMetadata({ params }) {
   if (!solution) return {};
 
   return {
-    title: `${solution.title} | ThinkFort IP`,
+    title: `${solution.title} | ThinkFortIP`,
     description: solution.excerpt,
     alternates: {
       canonical: `https://thinkfortip.com/solution/${slug}`,
     },
     openGraph: {
-      title: `${solution.title} | ThinkFort IP`,
+      title: `${solution.title} | ThinkFortIP`,
       description: solution.excerpt,
       url: `https://thinkfortip.com/solution/${slug}`,
       type: "article",
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${solution.title} | ThinkFort IP`,
+      title: `${solution.title} | ThinkFortIP`,
       description: solution.excerpt,
       images: [
         `https://thinkfortip.com${solution.image || "/logo.png"}`,

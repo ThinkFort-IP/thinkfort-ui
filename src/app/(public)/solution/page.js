@@ -3,7 +3,7 @@ import solutions from "@/data/solutions.json";
 
 /* -------------------- METADATA -------------------- */
 export const metadata = {
-  title: "Our Solutions | ThinkFort IP",
+  title: "Our Solutions | ThinkFortIP",
   description:
     "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Our Solutions | ThinkFort IP",
+    title: "Our Solutions | ThinkFortIP",
     description:
       "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
     url: "https://thinkfortip.com/solution",
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Solutions | ThinkFort IP",
+    title: "Our Solutions | ThinkFortIP",
     description:
       "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
     images: ["https://thinkfortip.com/logo.png"],

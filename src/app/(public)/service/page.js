@@ -3,7 +3,7 @@ import services from "@/data/services.json";
 
 /* -------------------- METADATA -------------------- */
 export const metadata = {
-  title: "Our Services | ThinkFort IP",
+  title: "Our Services | ThinkFortIP",
   description:
     "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
 
@@ -17,7 +17,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Our Services | ThinkFort IP",
+    title: "Our Services | ThinkFortIP",
     description:
       "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
     url: "https://thinkfortip.com/service",
@@ -26,7 +26,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Our Services | ThinkFort IP",
+    title: "Our Services | ThinkFortIP",
     description:
       "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
     images: ["https://thinkfortip.com/logo.png"],

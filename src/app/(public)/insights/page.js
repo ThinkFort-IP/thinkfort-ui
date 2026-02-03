@@ -3,9 +3,9 @@ import blogs from "@/data/blogs.json";
 
 /* -------------------- METADATA -------------------- */
 export const metadata = {
-  title: "IP & Legal Insights Blog | ThinkFort IP",
+  title: "IP & Legal Insights Blog | ThinkFortIP",
   description:
-    "Expert insights on patents, trademarks, copyrights, and intellectual property laws by ThinkFort IP.",
+    "Expert insights on patents, trademarks, copyrights, and intellectual property laws by ThinkFortIP.",
 
   alternates: {
     canonical: "https://thinkfortip.com/insights",
@@ -17,7 +17,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "IP & Legal Insights Blog | ThinkFort IP",
+    title: "IP & Legal Insights Blog | ThinkFortIP",
     description:
       "Stay updated with the latest IP laws, filing strategies, and legal insights.",
     url: "https://thinkfortip.com/insights",
@@ -26,7 +26,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "IP & Legal Insights Blog | ThinkFort IP",
+    title: "IP & Legal Insights Blog | ThinkFortIP",
     description:
       "Expert insights on patents, trademarks, copyrights, and intellectual property laws.",
     images: [
@@ -48,7 +48,7 @@ export default function Page() {
             "name": "IP & Legal Insights Blog",
             "url": "https://thinkfortip.com/insights",
             "description":
-              "Expert insights on patents, trademarks, copyrights, and intellectual property laws by ThinkFort IP.",
+              "Expert insights on patents, trademarks, copyrights, and intellectual property laws by ThinkFortIP.",
             itemListElement: blogs.map((blog, index) => ({
               "@type": "ListItem",
               position: index + 1,

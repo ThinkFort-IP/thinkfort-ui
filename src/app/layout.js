@@ -16,15 +16,15 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://thinkfortip.com"),
   title: {
-    default: "ThinkFort IP – IP Services",
-    template: "%s | ThinkFort IP",
+    default: "ThinkFortIP – IP Services",
+    template: "%s | ThinkFortIP",
   },
   description:
-    "ThinkFort IP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
+    "ThinkFortIP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
   openGraph: {
-    title: "ThinkFort IP – IP Services",
+    title: "ThinkFortIP – IP Services",
     description:
-      "ThinkFort IP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
+      "ThinkFortIP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
     url: "https://thinkfortip.com/",
     siteName: "ThinkFort",
     images: [

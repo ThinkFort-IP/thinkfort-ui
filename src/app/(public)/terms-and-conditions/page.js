@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Terms and Conditions",
+  description:
+    "Review ThinkFortIP’s Terms and Conditions outlining the rules, responsibilities, and legal guidelines for using our website and intellectual property services.",
+};
 export default function TermsAndCondtions() {
   return (
     <div className="mt-25">

@@ -3,7 +3,7 @@ import blogs from "@/data/blogs.json";
 
 /* -------------------- METADATA -------------------- */
 export const metadata = {
-  title: "IP & Legal Insights Blog | ThinkFortIP",
+  title: "IP & Legal Insights Blog",
   description:
     "Expert insights on patents, trademarks, copyrights, and intellectual property laws by ThinkFortIP.",
 

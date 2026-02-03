@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
-
 export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();

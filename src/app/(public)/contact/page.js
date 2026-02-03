@@ -1,7 +1,7 @@
 import RequirementMultiStepForm from "@/components/Form/RequirementMultiStepForm";
 
 export const metadata = {
-  title: "Support & Assistance",
+  title: "Contact us",
   description:
     "Get expert support from ThinkFort for intellectual property queries, filings, and legal assistance.",
   alternates: {

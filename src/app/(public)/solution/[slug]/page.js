@@ -53,7 +53,7 @@ export default async function Page({ params }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service", // Google-friendly schema
+            "@type": "Service",
             name: solution.title,
             description: solution.excerpt,
             url: `https://thinkfortip.com/solution/${solution.slug}`,

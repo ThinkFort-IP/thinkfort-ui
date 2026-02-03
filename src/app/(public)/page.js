@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import HeroSectionV2 from "@/components/HeroSectionV2";
 
 export const metadata = {
-  title: "Home | ThinkFortIP",
+  title: "Home",
   description: "Professional IP services by ThinkFortIP.",
   alternates: {
     canonical: "https://thinkfortip.com",

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "Read ThinkFortIP’s Privacy Policy to understand how we collect, use, protect, and manage personal information across our website and services.",
+};
 export default function PrivacyPolicy() {
   return (
     <div className="mt-25">

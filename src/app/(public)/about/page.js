@@ -1,6 +1,6 @@
 import Image from "next/image";
 export const metadata = {
-  title: "About | ThinkFortIP",
+  title: "About",
   description:
     "End-to-end IP filing services including patents, trademarks, and copyrights.",
 };

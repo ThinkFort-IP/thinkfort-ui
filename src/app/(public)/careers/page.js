@@ -1,8 +1,11 @@
 import JobCard from "@/components/JobCard";
 import jobs from "@/data/jobs.json";
-
+export const metadata = {
+  title: "Careers",
+  description:
+    "Explore career opportunities at ThinkFortIP. Join our intellectual property and legal team working on patents, trademarks, and innovation-driven projects.",
+};
 export default function Careers() {
-
   return (
     <div className="mt-35 mb-20 ">
       <section className="py-16">

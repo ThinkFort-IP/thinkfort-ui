@@ -1,7 +1,11 @@
 "use client";
 import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
-
+export const metadata = {
+  title: "Login",
+  description:
+    "Log in securely to your ThinkFortIP account to access your dashboard and manage intellectual property services.",
+};
 export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();

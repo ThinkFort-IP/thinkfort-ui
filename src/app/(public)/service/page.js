@@ -3,7 +3,7 @@ import services from "@/data/services.json";
 
 /* -------------------- METADATA -------------------- */
 export const metadata = {
-  title: "Our Services | ThinkFortIP",
+  title: "Our Services",
   description:
     "Discover ThinkFort's professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
 

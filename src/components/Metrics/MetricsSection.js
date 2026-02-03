@@ -112,6 +112,7 @@ export default function MetricsSection() {
           <Link
             href="/metrics"
             className="inline-flex items-center px-3 py-3 text-sm font-medium text-center text-white bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] rounded-lg focus:ring-4 focus:outline-none focus:ring-indigo-300 "
+            aria-label={`See more Metrics`}
           >
             See more
           </Link>

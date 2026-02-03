@@ -195,7 +195,7 @@ export default function Footer() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-[rgb(var(--brand-green))]">
-              © 2026 ThinkFort IP. All Rights Reserved.
+              © 2026 ThinkFortIP. All Rights Reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link

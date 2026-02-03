@@ -10,13 +10,13 @@ export async function generateMetadata({ params }) {
   if (!service) return {};
 
   return {
-    title: `${service.title} | ThinkFort IP`,
+    title: `${service.title} | ThinkFortIP`,
     description: service.excerpt,
     alternates: {
       canonical: `https://thinkfortip.com/service/${slug}`,
     },
     openGraph: {
-      title: `${service.title} | ThinkFort IP`,
+      title: `${service.title} | ThinkFortIP`,
       description: service.excerpt,
       url: `https://thinkfortip.com/service/${slug}`,
       type: "article",
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${service.title} | ThinkFort IP`,
+      title: `${service.title} | ThinkFortIP`,
       description: service.excerpt,
       images: [
         `https://thinkfortip.com${service.image || "/logo.png"}`,

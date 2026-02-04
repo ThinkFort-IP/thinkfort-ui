@@ -15,34 +15,47 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://thinkfortip.com"),
+
   title: {
-    default: "ThinkFortIP – IP Services",
+    default:
+      "ThinkFortIP | Intellectual Property & Patent Services for Innovators",
     template: "%s | ThinkFortIP",
   },
+
   description:
-    "ThinkFortIP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
+    "ThinkFortIP provides expert intellectual property, patent, trademark, and IP strategy services for startups, MSMEs, universities, and innovation-driven enterprises.",
+
   openGraph: {
-    title: "ThinkFortIP – IP Services",
+    title:
+      "ThinkFortIP | Intellectual Property & Patent Services for Innovators",
     description:
-      "ThinkFortIP provides expert intellectual property services, solutions, and legal support for startups and enterprises.",
+      "ThinkFortIP helps innovators protect, manage, and scale their ideas through strong intellectual property, patent, and trademark services.",
     url: "https://thinkfortip.com/",
-    siteName: "ThinkFort",
+    siteName: "ThinkFortIP",
     images: [
       {
         url: "https://thinkfortip.com/logo.png",
         width: 1200,
         height: 630,
+        alt: "ThinkFortIP – Intellectual Property Services",
       },
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
+    title:
+      "ThinkFortIP | Intellectual Property & Patent Services for Innovators",
+    description:
+      "Expert intellectual property, patent, and trademark services by ThinkFortIP for startups and enterprises.",
   },
+
   alternates: {
-    canonical: "https://thinkfortip.com",
+    canonical: "https://thinkfortip.com/",
   },
 };
+
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 export default function RootLayout({ children }) {

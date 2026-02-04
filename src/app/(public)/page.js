@@ -8,12 +8,17 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import HeroSectionV2 from "@/components/HeroSectionV2";
 
 export const metadata = {
-  title: "Home",
-  description: "Professional IP services by ThinkFortIP.",
+  title: {
+    absolute:
+      "ThinkFortIP | Intellectual Property & Patent Services for Innovators",
+  },
+  description:
+    "ThinkFortIP provides expert intellectual property, patent, trademark, and IP strategy services for startups, MSMEs, universities, and innovation-driven enterprises.",
   alternates: {
     canonical: "https://thinkfortip.com",
   },
 };
+
 
 export default function Home() {
   return (
@@ -27,22 +32,28 @@ export default function Home() {
               {
                 "@type": "Organization",
                 "@id": "https://thinkfortip.com/#organization",
-                "name": "ThinkFortIP",
-                "alternateName": "ThinkFort IP",
-                "url": "https://thinkfortip.com",
-                "logo": "https://thinkfortip.com/logo.png"
+                name: "ThinkFortIP",
+                alternateName: [
+                  "ThinkFort IP",
+                  "Think Fort IP",
+                  "Think FortIP",
+                ],
+                url: "https://thinkfortip.com",
+                logo: "https://thinkfortip.com/logo.png",
+                description:
+                  "ThinkFortIP provides expert intellectual property, patent, trademark, and IP strategy services for startups, MSMEs, and innovation-driven enterprises.",
               },
               {
                 "@type": "WebSite",
                 "@id": "https://thinkfortip.com/#website",
-                "url": "https://thinkfortip.com",
-                "name": "ThinkFortIP",
-                "publisher": {
-                  "@id": "https://thinkfortip.com/#organization"
-                }
-              }
-            ]
-          })
+                url: "https://thinkfortip.com",
+                name: "ThinkFortIP",
+                publisher: {
+                  "@id": "https://thinkfortip.com/#organization",
+                },
+              },
+            ],
+          }),
         }}
       />
 

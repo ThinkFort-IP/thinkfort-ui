@@ -39,20 +39,29 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "ThinkFort Solutions",
+            "@id": "https://thinkfortip.com/solutions#itemlist",
+            name: "ThinkFortIP Solutions",
             url: "https://thinkfortip.com/solutions",
             description:
-              "Explore ThinkFort's innovative IP solutions, including patent strategies, IP analytics, and legal consulting services.",
+              "Explore ThinkFortIP’s intellectual property solutions, including patent strategy, IP analytics, and legal consulting services for innovators.",
+            numberOfItems: solutions.length,
+            publisher: {
+              "@id": "https://thinkfortip.com/#organization",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://thinkfortip.com/solutions",
+            },
             itemListElement: solutions.map((solution, index) => ({
               "@type": "ListItem",
               position: index + 1,
               url: `https://thinkfortip.com/solutions/${solution.slug}`,
-              name: solution.title,
-              description: solution.excerpt,
+              name: solution.headline,
             })),
           }),
         }}
       />
+
       <div className="mt-35 mb-20">
         <SolutionsSection />
       </div>

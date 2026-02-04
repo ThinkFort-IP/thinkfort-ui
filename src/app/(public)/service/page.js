@@ -43,20 +43,29 @@ export default function Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "ThinkFort Services",
+            "@id": "https://thinkfortip.com/service#itemlist",
+            name: "ThinkFortIP Services",
             url: "https://thinkfortip.com/service",
             description:
               "Professional IP services including patent filings, trademarks, copyright protection, and IP consulting.",
+            publisher: {
+              "@id": "https://thinkfortip.com/#organization",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://thinkfortip.com/service",
+            },
             itemListElement: services.map((service, index) => ({
               "@type": "ListItem",
               position: index + 1,
               url: `https://thinkfortip.com/service#${service.slug}`,
               name: service.title,
-              description: service.excerpt,
+              description: service.description,
             })),
           }),
         }}
       />
+
       <div className="mt-35 mb-20">
         <ServiceSection />
       </div>

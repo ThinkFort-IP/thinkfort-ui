@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: `${solution.audience} | ThinkFortIP`,
-      description: solution.excerpt,
+      description: solution.headline,
       images: [
         `https://thinkfortip.com/logo.png`,
       ],
@@ -53,7 +53,7 @@ export default async function Page({ params }) {
             "@context": "https://schema.org",
             "@type": "Service",
             name: solution.audience,
-            description: solution.excerpt,
+            description: solution.headline,
             url: `https://thinkfortip.com/solution/${solution.slug}`,
             provider: {
               "@type": "Organization",

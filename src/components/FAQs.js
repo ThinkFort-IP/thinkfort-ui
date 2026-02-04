@@ -6,20 +6,12 @@ export default function FAQs () {
 
     return (
         <>
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-                * {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
-            <div className="mt-35 mb-20 flex flex-col md:flex-row items-start justify-center gap-8 px-4 md:px-0">
-                
+            <div className="mt-35 mb-20 flex flex-col md:flex-row items-start justify-center gap-8 px-4 ">
                 <div>
                     <p className="text-[rgb(var(--brand-gold))] text-sm font-medium">FAQ&apos;s</p>
                     <h1 className="text-3xl font-semibold">Looking for answer?</h1>
-                    <p className="text-sm text-slate-500 mt-2 pb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis bibendum felis a dignissim.
+                    <p className="text-sm text-slate-500 mt-2 pb-4 max-w-250">
+                        Have questions about intellectual property, patents, trademarks, or our services? We’ve compiled answers to the most common queries to help you understand ThinkFortIP’s processes, offerings, and support options.
                     </p>
                     {faqs.map((faq, index) => (
                         <div className="border-b border-slate-200 py-4 cursor-pointer" key={index} onClick={() => setOpenIndex(openIndex === index ? null : index)}>

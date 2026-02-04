@@ -18,7 +18,24 @@ import SupportForm from "@/components/Form/SupportForm";
 export default function Page() {
   return (
     <>
-        <SupportForm />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "ThinkFortIP Technical Support",
+            url: "https://thinkfortip.com/support",
+            description:
+              "Technical support page for reporting website issues, bugs, and access problems.",
+            mainEntity: {
+              "@id": "https://thinkfortip.com/#organization",
+            },
+          }),
+        }}
+      />
+
+      <SupportForm />
     </>
   );
 }

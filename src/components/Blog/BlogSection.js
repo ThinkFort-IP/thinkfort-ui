@@ -13,7 +13,6 @@ export default function BlogSection() {
         Insights you trust
       </h1>
       <p className="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">
-        {/* TODO */}
         Strategic analysis and evidence-based insights to support your most
         important intellectual property decisions
       </p>

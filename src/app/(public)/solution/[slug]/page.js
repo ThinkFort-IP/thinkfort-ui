@@ -9,21 +9,19 @@ export async function generateMetadata({ params }) {
   if (!solution) return {};
 
   return {
-    title: `${solution.title} | ThinkFortIP`,
-    description: solution.excerpt,
+    title: `${solution.audience}`,
+    description: solution.headline,
     alternates: {
       canonical: `https://thinkfortip.com/solution/${slug}`,
     },
     openGraph: {
-      title: `${solution.title} | ThinkFortIP`,
-      description: solution.excerpt,
+      title: `${solution.audience} | ThinkFortIP`,
+      description: solution.headline,
       url: `https://thinkfortip.com/solution/${slug}`,
       type: "article",
       images: [
         {
-          url: `https://thinkfortip.com${
-            solution.image || "/logo.png"
-          }`,
+          url: `https://thinkfortip.com/logo.png`,
           width: 1200,
           height: 630,
         },
@@ -31,10 +29,10 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${solution.title} | ThinkFortIP`,
-      description: solution.excerpt,
+      title: `${solution.audience} | ThinkFortIP`,
+      description: solution.headline,
       images: [
-        `https://thinkfortip.com${solution.image || "/logo.png"}`,
+        `https://thinkfortip.com/logo.png`,
       ],
     },
   };
@@ -54,8 +52,8 @@ export default async function Page({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: solution.title,
-            description: solution.excerpt,
+            name: solution.audience,
+            description: solution.headline,
             url: `https://thinkfortip.com/solution/${solution.slug}`,
             provider: {
               "@type": "Organization",

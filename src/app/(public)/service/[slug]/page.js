@@ -10,19 +10,19 @@ export async function generateMetadata({ params }) {
   if (!service) return {};
 
   return {
-    title: `${service.title} | ThinkFortIP`,
-    description: service.excerpt,
+    title: `${service.title}`,
+    description: service.description,
     alternates: {
       canonical: `https://thinkfortip.com/service/${slug}`,
     },
     openGraph: {
       title: `${service.title} | ThinkFortIP`,
-      description: service.excerpt,
+      description: service.description,
       url: `https://thinkfortip.com/service/${slug}`,
       type: "article",
       images: [
         {
-          url: `https://thinkfortip.com${service.image || "/logo.png"}`,
+          url: `https://thinkfortip.com/logo.png`,
           width: 1200,
           height: 630,
         },
@@ -31,10 +31,8 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: `${service.title} | ThinkFortIP`,
-      description: service.excerpt,
-      images: [
-        `https://thinkfortip.com${service.image || "/logo.png"}`,
-      ],
+      description: service.description,
+      images: [`https://thinkfortip.com/logo.png`],
     },
   };
 }
@@ -53,18 +51,22 @@ export default async function Page({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": `https://thinkfortip.com/service/${service.slug}#service`,
             name: service.title,
-            description: service.excerpt,
+            description: service.description,
+            serviceType: service.title,
             url: `https://thinkfortip.com/service/${service.slug}`,
             provider: {
-              "@type": "Organization",
-              name: "ThinkFort",
-              url: "https://thinkfortip.com",
-              logo: "https://thinkfortip.com/logo.png",
+              "@id": "https://thinkfortip.com/#organization",
+            },
+            areaServed: {
+              "@type": "AdministrativeArea",
+              name: "India",
             },
           }),
         }}
       />
+
       <div className="mt-35">
         {service && <ServicePage service={service} />}
       </div>

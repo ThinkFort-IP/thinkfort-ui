@@ -7,26 +7,55 @@ export const metadata = {
 };
 export default function Careers() {
   return (
-    <div className="mt-35 mb-20 ">
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800">Join Our Team</h2>
-            <p className="mt-4 text-gray-600">
-              We’re looking for talented individuals to help us shape the
-              future. Explore our current opportunities and find your perfect
-              role.
-            </p>
-          </div>
-          <div className="mt-10">
-            <div className="flex gap-10 flex-wrap justify-center">
-              {jobs?.map((job) => (
-                <JobCard key={job.id} job={job} />
-              ))}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Careers at ThinkFortIP",
+            url: "https://thinkfortip.com/careers",
+            itemListElement: jobs.map((job, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": "JobPosting",
+                title: job.title,
+                hiringOrganization: {
+                  "@type": "Organization",
+                  name: "ThinkFortIP",
+                  sameAs: "https://thinkfortip.com",
+                  logo: "https://thinkfortip.com/logo.png",
+                },
+              },
+            })),
+          }),
+        }}
+      />
+      <div className="mt-35 mb-20 ">
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-800">
+                Join Our Team
+              </h2>
+              <p className="mt-4 text-gray-600">
+                We’re looking for talented individuals to help us shape the
+                future. Explore our current opportunities and find your perfect
+                role.
+              </p>
+            </div>
+            <div className="mt-10">
+              <div className="flex gap-10 flex-wrap justify-center">
+                {jobs?.map((job) => (
+                  <JobCard key={job.id} job={job} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

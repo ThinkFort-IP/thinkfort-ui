@@ -10,9 +10,18 @@ export async function generateMetadata({ params }) {
 
   return {
     title: blog.title,
-    description: blog.excerpt,
+    alternates: {
+      canonical: `https://thinkfortip.com/insights/${blog.slug}`,
+    },
+    openGraph: {
+      title: blog.title,
+      url: `https://thinkfortip.com/insights/${blog.slug}`,
+      type: "article",
+      images: [`https://thinkfortip.com${blog.image}`],
+    },
   };
 }
+
 
 /* -------------------- PAGE -------------------- */
 export default async function Page({ params }) {
@@ -23,34 +32,48 @@ export default async function Page({ params }) {
   return (
     <>
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: blog.title,
-            description: blog.excerpt,
-            image: `thinkfortip.com${blog.image}`,
-            author: {
-              "@type": "Organization",
-              name: "ThinkFort",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "ThinkFort",
-              logo: {
-                "@type": "ImageObject",
-                url: "thinkfortip.com/logo.png",
-              },
-            },
-            datePublished: blog.publishedAt?.iso,
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": `thinkfortip.com/insights/${blog.slug}`,
-            },
-          }),
-        }}
-      />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": `https://thinkfortip.com/insights/${blog.slug}#blogposting`,
+
+      headline: blog.title,
+
+      image: {
+        "@type": "ImageObject",
+        url: `https://thinkfortip.com${blog.image}`,
+      },
+
+      datePublished: blog.publishedAt?.iso ?? "2026-01-01",
+
+      author: {
+        "@type": "Organization",
+        "@id": "https://thinkfortip.com/#organization",
+        name: "ThinkFortIP",
+        url: "https://thinkfortip.com",
+      },
+
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://thinkfortip.com/#organization",
+        name: "ThinkFortIP",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://thinkfortip.com/logo.png",
+        },
+      },
+
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://thinkfortip.com/insights/${blog.slug}`,
+      },
+    }),
+  }}
+/>
+
+
       <div className="mt-35">{blog && <BlogPage blog={blog} />}</div>
     </>
   );

@@ -20,7 +20,7 @@ export default function SupportForm() {
     };
 
     try {
-      const res = await fetch("/api/support", {
+      const res = await fetch("/api/support/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

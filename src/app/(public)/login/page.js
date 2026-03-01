@@ -75,13 +75,6 @@ export default function Login() {
         >
           Login
         </button>
-        <p className="mt-5">OR</p>
-        <Link
-          className="px-10 mt-5 inline-flex items-center px-3 py-3 text-sm font-medium text-center text-white bg-[rgb(var(--brand-green))] hover:bg-[rgb(var(--btn-hover))] rounded-full focus:ring-4 focus:outline-none focus:ring-indigo-300 "
-          href={"/admin/login"}
-        >
-          Login as Admin
-        </Link>
 
         <div className="mt-5 flex w-full flex-col items-center justify-center">
           <p>Having trouble logging in?</p>

@@ -44,14 +44,7 @@ export default async function Page({ params }) {
               sameAs: "https://thinkfortip.com",
               logo: "https://thinkfortip.com/logo.png",
             },
-            jobLocation: {
-              "@type": "Place",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "India",
-                addressCountry: "IN",
-              },
-            },
+            "jobLocationType": "TELECOMMUTE",
             applicantLocationRequirements: {
               "@type": "Country",
               name: "India",

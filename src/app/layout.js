@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Clarity from "@/components/Clarity";
 import GlobalFetchLoader from "@/components/GlobalFetchLoader";
+import ChatBot from "@/components/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,16 +60,18 @@ export const metadata = {
 
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {GA_ID && <GoogleAnalytics gaId={GA_ID}/>}
+        {CLARITY_ID && <Clarity id={CLARITY_ID} />}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics gaId={GA_ID}/>
         <GlobalFetchLoader />
         {children}
+        <ChatBot />
       </body>
     </html>
   );

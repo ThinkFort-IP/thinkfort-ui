@@ -83,7 +83,7 @@ export function welcomeEmailHtml() {
 
                   <p style="margin-top:24px;">
                     If you ever have a question related to IP protection or strategy,
-                    simply email us at thinkfortip@outlook.com — our experts are happy to help.
+                    simply email us at info@thinkfortip.com — our experts are happy to help.
                   </p>
 
                   <p style="margin-top:32px;">
@@ -96,7 +96,7 @@ export function welcomeEmailHtml() {
               <!-- Footer -->
               <tr>
                 <td style="border-top:1px solid #e5e7eb; padding-top:16px; font-size:13px; color:#6b7280;">
-                  📧 thinkfortip@outlook.com &nbsp;|&nbsp;
+                  📧 info@thinkfortip.com &nbsp;|&nbsp;
                   🌐 <a href="https://thinkfortip.com" style="color:#2563eb; text-decoration:none;">
                     thinkfortip.com
                   </a>

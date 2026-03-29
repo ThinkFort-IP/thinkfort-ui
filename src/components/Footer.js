@@ -158,7 +158,7 @@ export default function Footer() {
 
             <div className="w-full md:w-[45%] lg:w-[25%] flex flex-col items-center md:items-start text-center md:text-left">
               <h3 className="text-sm text-[rgb(var(--brand-green))] font-medium">
-                Subscribe for news
+                Subscribe for newsletter
               </h3>
               <form onSubmit={handleSubscribe} className="w-full max-w-80 mt-4">
                 <div className="flex items-center border gap-2 border-[rgb(var(--brand-green))] h-13 max-w-80 w-full rounded-full overflow-hidden mt-4">

@@ -59,10 +59,10 @@ export default function SupportForm() {
           <br />
           Or email{" "}
           <a
-            href="mailto:thinkfortip@outlook.com"
+            href="mailto:info@thinkfortip.com"
             className="text-[rgb(var(--brand-green))] hover:underline"
           >
-            thinkfortip@outlook.com
+            info@thinkfortip.com
           </a>
         </p>
 

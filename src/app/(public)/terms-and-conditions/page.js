@@ -395,7 +395,7 @@ export default function TermsAndCondtions() {
                     contact:
                   </p>
                   <a
-                    href="mailto:thinkfortip@outlook.com"
+                    href="mailto:info@thinkfortip.com"
                     className="inline-flex items-center text-[rgb(var(--brand-gold))] hover:text-[rgb(var(--brand-green))]"
                   >
                     <svg

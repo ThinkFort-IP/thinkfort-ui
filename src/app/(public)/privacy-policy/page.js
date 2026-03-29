@@ -139,7 +139,7 @@ export default function PrivacyPolicy() {
                 If you have previously agreed to us using your personal
                 information for direct marketing purposes, you may change your
                 mind at any time by writing or emailing us at
-                thinkfortip@outlook.com
+                info@thinkfortip.com
               </li>
               <li>
                 We will not sell, distribute, or lease your personal information
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
               <li>
                 You may request details of personal information which we hold
                 about you. If you would like a copy of the information held on
-                you, please email us at thinkfortip@outlook.com
+                you, please email us at info@thinkfortip.com
               </li>
               <li>
                 If you believe that any information we are holding on you is

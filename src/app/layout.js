@@ -65,10 +65,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {CLARITY_ID && <Clarity id={CLARITY_ID} />}
+        {/* {CLARITY_ID && <Clarity id={CLARITY_ID} />} */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics gaId={GA_ID}/>
+        <Clarity id={CLARITY_ID}/>
         <GlobalFetchLoader />
         {children}
         <ChatBot />
